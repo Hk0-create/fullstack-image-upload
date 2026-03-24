@@ -1,0 +1,14 @@
+# Root and General
+node_modules/
+.env
+.DS_Store
+
+# Backend Specific
+Backend/node_modules/
+Backend/.env
+
+# Frontend Specific
+Frontend/node_modules/
+Frontend/.env
+Frontend/dist/
+Frontend/build/

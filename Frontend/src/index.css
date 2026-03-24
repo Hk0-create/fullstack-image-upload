@@ -1,0 +1,130 @@
+/* 1. Global Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Soft Gradient Background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Create Post Section */
+.create-post-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.create-post-section h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.create-post-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px; /* Responsive limit */
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-top: 5px solid #ff416c; /* Colorful accent */
+}
+
+/* Inputs & Textarea */
+.create-post-section input,
+.create-post-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.create-post-section input:focus {
+  border-color: #ff4b2b; /* Change color on focus */
+}
+
+/* Vibrant Button */
+.create-post-section button {
+  padding: 12px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b); /* Orange-Red Gradient */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create-post-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* 3. Feed Section */
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Responsive Post Card */
+.post-card {
+  width: 100%;
+  max-width: 500px; /* Mobile friendly */
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02); /* Subtle zoom effect */
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  object-fit: cover;
+  border: 1px solid #f0f0f0;
+}
+
+.post-card p {
+  margin-top: 12px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* 4. Media Queries (For Responsiveness) */
+@media (max-width: 480px) {
+  .create-post-section form, 
+  .post-card {
+    width: 95%; /* Choti screens par thodi jagah chorni hai */
+    padding: 15px;
+  }
+  
+  .create-post-section h1 {
+    font-size: 24px;
+  }
+}
